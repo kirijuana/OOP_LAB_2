@@ -1,37 +1,50 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 #include <string>
 #include <map>
 #include "Ship.h"
+#include "TransportShip.h"
 
 using namespace std;
+
+struct add_inf
+{
+	Ship *s;
+	double distance_to_point;
+};
+
 class Table
 {
 protected:
-	map<const int, Ship *> arr;
-	string callsign; // позывной
-	unsigned int distance_to_point;
+	map<string, add_inf> arr;
 public:
-	Table() {};
-
-	~Table()
+	Table() 
 	{
-		map<const int, Ship *>::iterator p;
-		for (p = arr.begin(); p != arr.end(); ++p)
-		{
-			delete p->second;
-			p->second = nullptr;
-		}
-		
-	}
 	
-	Ship & getShip(const string c) 
-	{ 
-		if (arr[0].callsign == c)
-		{
+	};
 
-		}
+	Ship * getShip(const string c);
+	unsigned int getNumb_of_ships() const;
+	void addShip(string s, double d, Ship *sh);
+	void deleteShip(string s);
 
 
-	}
+	//void outTable()
+	//{
+	//	map<string, add_inf>::iterator p;
+	//	int i = 0;
+	//	for (p = arr.begin(); p != arr.end(); ++p)
+	//	{
+	//		p->second.s->Out();
+	//	}
+	//}
+	
+	void outTable();
+	void outFileTable(ofstream &ofst);
+	void InFileTable(ifstream &ifst);
+	string getShip_name();
+	map<string, add_inf> getArray();
+
+
 };
+

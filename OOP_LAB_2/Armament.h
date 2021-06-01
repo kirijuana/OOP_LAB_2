@@ -28,50 +28,15 @@ public:
 		ammunition = am;
 	}
 
-	float getCaliber() const
-	{
-		return caliber;
-	}
-
-	unsigned int getFiring_range() const
-	{
-		return firing_range;
-	}
-
-	string getLocation() const
-	{
-		return location;
-	}
-
-	unsigned int getAmmunition() const
-	{
-		return ammunition;
-	}
-
-	float setCaliber(float c) 
-	{
-		return caliber = c;
-	}
-
-	unsigned int setFiring_range(unsigned int f)
-	{
-		return firing_range = f;
-	}
-
-	string setLocation(string l)
-	{
-		return location = l;
-	}
-
-	unsigned int setAmmunition(unsigned int a)
-	{
-		return ammunition = a;
-	}
-
-	void Shot()
-	{
-		ammunition--;
-	}
+	float getCaliber() const;
+	unsigned int getFiring_range() const;
+	string getLocation() const;
+	unsigned int getAmmunition() const;
+	float setCaliber(float c);
+	unsigned int setFiring_range(unsigned int f);
+	string setLocation(string l);
+	unsigned int setAmmunition(unsigned int a);
+	void Shot();
 
 
 };

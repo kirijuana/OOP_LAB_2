@@ -152,7 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Armament.h" />
-    <ClInclude Include="Capitan.h" />
+    <ClInclude Include="Captain.h" />
     <ClInclude Include="Convoy.h" />
     <ClInclude Include="EscortShip.h" />
     <ClInclude Include="pch.h" />
@@ -161,6 +161,9 @@
     <ClInclude Include="TransportShip.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Armament.cpp" />
+    <ClCompile Include="Captain.cpp" />
+    <ClCompile Include="Convoy.cpp" />
     <ClCompile Include="EscortShip.cpp" />
     <ClCompile Include="OOP_LAB_2.cpp" />
     <ClCompile Include="pch.cpp">
@@ -169,6 +172,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Table.cpp" />
     <ClCompile Include="TransportShip.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
